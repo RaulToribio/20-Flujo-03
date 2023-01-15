@@ -1,0 +1,238 @@
+[
+    {
+        "id": "eabc45d3eca94a34",
+        "type": "tab",
+        "label": "Flujo 03",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7d964c4b03f3e6c0",
+        "type": "inject",
+        "z": "eabc45d3eca94a34",
+        "name": "Texto de Prueba",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 40,
+        "wires": [
+            [
+                "83afb19d67525bf6"
+            ]
+        ]
+    },
+    {
+        "id": "728e0f41f0625410",
+        "type": "inject",
+        "z": "eabc45d3eca94a34",
+        "name": "Valor \"0\"",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 100,
+        "y": 100,
+        "wires": [
+            [
+                "7f9bda426a77fecd",
+                "9beafe0e96f2dec9"
+            ]
+        ]
+    },
+    {
+        "id": "36fa642fd65d8374",
+        "type": "inject",
+        "z": "eabc45d3eca94a34",
+        "name": "Valor \"5\"",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "num",
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "7f9bda426a77fecd",
+                "9beafe0e96f2dec9"
+            ]
+        ]
+    },
+    {
+        "id": "4c33ea3811d84082",
+        "type": "inject",
+        "z": "eabc45d3eca94a34",
+        "name": "Valor \"10\"",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 100,
+        "y": 220,
+        "wires": [
+            [
+                "7f9bda426a77fecd",
+                "9beafe0e96f2dec9"
+            ]
+        ]
+    },
+    {
+        "id": "7f9bda426a77fecd",
+        "type": "ui_gauge",
+        "z": "eabc45d3eca94a34",
+        "name": "",
+        "group": "6e35d69397d89314",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 290,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "9beafe0e96f2dec9",
+        "type": "ui_chart",
+        "z": "eabc45d3eca94a34",
+        "name": "",
+        "group": "6e35d69397d89314",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 290,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "83afb19d67525bf6",
+        "type": "ui_text",
+        "z": "eabc45d3eca94a34",
+        "group": "6e35d69397d89314",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Texto de Prueba",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 360,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "6e35d69397d89314",
+        "type": "ui_group",
+        "name": "Gráficas",
+        "tab": "d57eade95ed84829",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d57eade95ed84829",
+        "type": "ui_tab",
+        "name": "Flujo 03",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    }
+]
